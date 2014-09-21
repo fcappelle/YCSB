@@ -54,10 +54,10 @@ public class CassandraClient10 extends DB
   public String column_family;
 
   public static final String CONNECTION_RETRY_PROPERTY = "cassandra.connectionretries";
-  public static final String CONNECTION_RETRY_PROPERTY_DEFAULT = "300";
+  public static final String CONNECTION_RETRY_PROPERTY_DEFAULT = "1";
 
   public static final String OPERATION_RETRY_PROPERTY = "cassandra.operationretries";
-  public static final String OPERATION_RETRY_PROPERTY_DEFAULT = "300";
+  public static final String OPERATION_RETRY_PROPERTY_DEFAULT = "1";
 
   public static final String USERNAME_PROPERTY = "cassandra.username";
   public static final String PASSWORD_PROPERTY = "cassandra.password";
@@ -150,7 +150,8 @@ public class CassandraClient10 extends DB
       }
       try
       {
-        Thread.sleep(1000);
+        System.out.println("Reconnect!");
+        Thread.sleep(10);
       } catch (InterruptedException e)
       {
       }
@@ -212,8 +213,10 @@ public class CassandraClient10 extends DB
       }
       catch (Exception e)
       {
-        e.printStackTrace();
-        e.printStackTrace(System.out);
+          //TODO make error logging level configurable
+          //e.printStackTrace();
+          //e.printStackTrace(System.out);
+          System.err.println(e);
         return Error;
       }
     }
@@ -275,15 +278,17 @@ public class CassandraClient10 extends DB
         errorexception = e;
       }
 
-      try
+/*      try
       {
         Thread.sleep(500);
       } catch (InterruptedException e)
       {
-      }
+      }*/
     }
-    errorexception.printStackTrace();
-    errorexception.printStackTrace(System.out);
+    //TODO make error logging level configurable
+    //errorexception.printStackTrace();
+    //errorexception.printStackTrace(System.out);
+    System.err.println(errorexception);
     return Error;
 
   }
@@ -316,9 +321,11 @@ public class CassandraClient10 extends DB
       }
       catch (Exception e)
       {
-        e.printStackTrace();
-        e.printStackTrace(System.out);
-        return Error;
+          //TODO make error logging level configurable
+          //e.printStackTrace();
+          //e.printStackTrace(System.out);
+          System.err.println(e);
+          return Error;
       }
     }
 
@@ -386,15 +393,17 @@ public class CassandraClient10 extends DB
       {
         errorexception = e;
       }
-      try
+/*      try
       {
         Thread.sleep(500);
       } catch (InterruptedException e)
       {
-      }
+      }*/
     }
-    errorexception.printStackTrace();
-    errorexception.printStackTrace(System.out);
+    //TODO make error logging level configurable
+    //errorexception.printStackTrace();
+    //errorexception.printStackTrace(System.out);
+    System.err.println(errorexception);
     return Error;
   }
 
@@ -439,9 +448,11 @@ public class CassandraClient10 extends DB
       }
       catch (Exception e)
       {
-        e.printStackTrace();
-        e.printStackTrace(System.out);
-        return Error;
+          //TODO make error logging level configurable
+          //e.printStackTrace();
+          //e.printStackTrace(System.out);
+          System.err.println(e);
+          return Error;
       }
     }
 
@@ -490,16 +501,18 @@ public class CassandraClient10 extends DB
       {
         errorexception = e;
       }
-      try
+/*      try
       {
         Thread.sleep(500);
       } catch (InterruptedException e)
       {
-      }
+      }*/
     }
 
-    errorexception.printStackTrace();
-    errorexception.printStackTrace(System.out);
+    //TODO make error logging level configurable
+    //errorexception.printStackTrace();
+    //errorexception.printStackTrace(System.out);
+    System.err.println(errorexception);
     return Error;
   }
 
@@ -522,9 +535,11 @@ public class CassandraClient10 extends DB
       }
       catch (Exception e)
       {
-        e.printStackTrace();
-        e.printStackTrace(System.out);
-        return Error;
+          //TODO make error logging level configurable
+          //e.printStackTrace();
+          //e.printStackTrace(System.out);
+          System.err.println(e);
+          return Error;
       }
     }
 
@@ -548,15 +563,17 @@ public class CassandraClient10 extends DB
       {
         errorexception = e;
       }
-      try
+/*      try
       {
         Thread.sleep(500);
       } catch (InterruptedException e)
       {
-      }
+      }*/
     }
-    errorexception.printStackTrace();
-    errorexception.printStackTrace(System.out);
+    //TODO make error logging level configurable
+    //errorexception.printStackTrace();
+    //errorexception.printStackTrace(System.out);
+    System.err.println(errorexception);
     return Error;
   }
 
